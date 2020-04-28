@@ -4,3 +4,5 @@ If an update or a creation is sure to be committed, then implement it in the mas
 Otherwise it indicates the possibility of future modification or discard, so save it in another branch.
 
 Any contribution or alteration is at your discretion.
+
+RCM(folder):  RCM.py implements RCM model. Currently it is designed as a module.
