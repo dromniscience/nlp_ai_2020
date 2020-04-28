@@ -13,7 +13,7 @@ r'''Implement RCM model
     Both RNN network and decoding part take no bias.
     However these attributes can be easily modified.
 
-    If you want it to run on GPU if possible, please specifically configure it.
+    If you want it to run on GPU, please specifically configure it.
 '''
 
 import torch
@@ -39,7 +39,7 @@ class RCM(nn.Module):
         self.hidden_size = hidden_size
         self.num_layers = num_layers
         self.output_size = output_size
-        
+
         self.rnn = nn.RNN(input_size,
                           hidden_size,
                           num_layers,
@@ -67,6 +67,7 @@ class RCM(nn.Module):
         outputs = torch.stack(position, 1)  # outputs: tensor of shape (batch_size, m-1, output_size)
         return outputs
 
+# Testing
 if __name__ == '__main__':
     model = RCM(5, 10, 10, 2, 10)
 
