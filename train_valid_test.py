@@ -88,7 +88,7 @@ def test(model):
         output=np.argmax(output,axis=0)  # 假设一个列向量为一个位置的预测
         length=len(output)
         for i in range(length):
-            print(idx2Wd5(output[i]))
+            print(idx2Wd5[output[i]])
         
     while epoch_finish7==1:
         batch_x,batch_y=get_batch(test_vec_lst7,BATCH_SIZE)
@@ -96,7 +96,7 @@ def test(model):
         output=np.argmax(output,axis=0)
         length=len(output)
         for i in range(length):
-            print(idx2Wd7(output[i]))
+            print(idx2Wd7[output[i]])
     
 train(model=net,loss_func=loss_function,optim=optimizer,num_epochs=100)
 valid(model=net,loss_func=loss_function)
