@@ -1,1 +1,6 @@
-
+此文件夹包含：
+1、seq2seq_attn_bigru.ipynb
+2、seq2seq_attn_gru.ipynb
+3、seq2seq_attn_BiLSTM.ipynb
+其中最完善的是LSTM版本，最后用beam search的方式进行解码。另外两个版本也可使用，大同小异，没有仔细比对过效果。
+由于pytorch官方tutorial上有类似的seq2seq+attention的实现，故上述代码都是在该样例的基础上作的改动和优化
